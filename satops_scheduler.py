@@ -77,7 +77,7 @@ def main():
 
         for line in lines:
             if sat_name in line:
-                print('satellite found')
+                print('TLE for {} found!'.format(sat_name))
                 sat = True
             if sat:
                 if cnt == 0:
@@ -133,9 +133,8 @@ def main():
                                                                            0],
                                                                        str(local_aos.isoformat()).split("T")[1].split(":")[
                                                                            1], max_elev),
-                            'location': 'LEO',
-                            'description': 'Automated event created for {} operational pass over GS {}'.format(sat_name,
-                                                                                                               gs_name),
+                            'location': 'GS {}'.format(gs_name),
+                            'description': 'Automated event created for {} operational pass'.format(sat_name),
                             'start': {
                                 'dateTime': str(aos_time - timedelta(minutes=10)).split()[0],
                                 'timeZone': 'UTC',
