@@ -10,6 +10,7 @@ Required libraries:
 - google-api-python-client
 - google-auth-oauthlib
 - requests
+- python-dateutil
  
 # Detailed instructions 
 First ensure the 'config.ini' file is set up to track the satellites you want over you ground station/s, also add the google calendar ID where you want to write the events to. You need to generate a 'credentials.json' file in your google account to write the events to the calendar of your choice (in https://console.cloud.google.com/apis/credentials ), you may have to generate a new project there
